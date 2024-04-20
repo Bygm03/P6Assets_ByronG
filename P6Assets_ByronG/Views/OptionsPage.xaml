@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P6Assets_ByronG.Views.OptionsPage"
+             Title="OptionsPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Label 
+            Text="Select an Action"
+            Grid.Row="0"
+            HorizontalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand" 
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="20"/>
+
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="203" />
+                <ColumnDefinition Width="203" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+
+            
+            <Button Grid.Column="0" Grid.Row="0" Text="Assets Management" Margin="5" TextColor="Black" BackgroundColor="#B1F8B1" />
+
+
+            <Button Grid.Column="1" Grid.Row="0" Text="My Account" Margin="5" TextColor="Black" BackgroundColor="#B9B1F8" />
+
+            
+            <Button Grid.Column="0" Grid.Row="1" Text="Departments" Margin="5" TextColor="Black" BackgroundColor="#E3F8B1" />
+
+            
+            <Button Grid.Column="1" Grid.Row="1" Text="Categories" Margin="5" TextColor="Black" BackgroundColor="#F8D8B1" />
+
+            
+            <Button Grid.Column="0" Grid.Row="2" Text="Depreciation Management" Margin="5" TextColor="Black" BackgroundColor="WhiteSmoke" />
+
+            
+            <Button Grid.Column="1" Grid.Row="2" Text="Exit" Margin="5" TextColor="Black" BackgroundColor="WhiteSmoke" />
+        </Grid>
+    </Grid>
+</ContentPage>
