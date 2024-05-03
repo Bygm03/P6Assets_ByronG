@@ -24,7 +24,7 @@ public partial class UserSignUpPage : ContentPage
     
     private async void LoadUserRoles()
     {
-        CboxUserRole.ItemsSource = await vm.GetUserRolesAsync();
+        CboxUserRole.ItemsSource = await vm.GetAllUserRolesAsync();
     }
 
 

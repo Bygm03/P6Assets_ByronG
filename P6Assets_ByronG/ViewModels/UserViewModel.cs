@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using P6Assets_ByronG.Models;
+using RestSharp;
+
+
 
 namespace P6Assets_ByronG.ViewModels
 {
@@ -20,7 +25,7 @@ namespace P6Assets_ByronG.ViewModels
         }
 
         //carga de roles de usuarios
-        public async Task<List<UserRole>?> GetUserRolesAsync()
+        public async Task<List<UserRole>?> GetAllUserRolesAsync()
         {
             try
             {
@@ -42,6 +47,8 @@ namespace P6Assets_ByronG.ViewModels
             }
 
         }
+
+        
 
 
 

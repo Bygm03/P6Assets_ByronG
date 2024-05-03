@@ -33,28 +33,30 @@ namespace P6Assets_ByronG.Models
         {
             try
             {
-                //tenemos que armar la ruta completa de consumo API
-                //para eso tenemso en WebAPIConnecion la ruta base del API
+                //tenemos que armar la ruta completa de consumo del API
+                //para eso tenemos en WebAPIConnection la ruta base del API
                 //y aca la completamos
                 string RouterSufix = string.Format("UserRoles");
 
                 //armamos la ruta completa de consumo del API
                 string URL = Services.WebAPIConnection.ProductionURLPrefix + RouterSufix;
-                //ahora tenemos la ruta completa lista
+                // ajora tenemos la ruta completa lista
 
-                //Configuramos el request
+                //configuramos el request
+
                 RestClient client = new RestClient(URL);
 
                 Request = new RestRequest(URL, Method.Get);
 
-                //agregamos el método de seguridad, en este caso tenemos apiKey
-                Request.AddHeader(Services.WebAPIConnection.ApiKeyName,
-                                  Services.WebAPIConnection.ApiKeyValue);
+                //agregamos el metodo de seguridad, en este caso tenemos apikey
+                Request.AddHeader(Services.WebAPIConnection.ApiKeyName, Services.WebAPIConnection.ApiKeyValue);
+
 
                 //y ahora ejecutamos la llamada al API
                 RestResponse response = await client.ExecuteAsync(Request);
 
                 //validamos que todo haya salido bien
+
                 HttpStatusCode statusCode = response.StatusCode;
 
                 if (statusCode == HttpStatusCode.OK)
@@ -63,13 +65,13 @@ namespace P6Assets_ByronG.Models
                     var list = JsonConvert.DeserializeObject<List<UserRole>>(response.Content);
 
                     return list;
+
                 }
-                else 
+                else
                 {
-                    return null;              
+                    return null;
                 }
-            
-  
+
             }
             catch (Exception ex)
             {

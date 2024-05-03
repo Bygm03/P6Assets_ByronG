@@ -16,9 +16,9 @@ namespace P6Assets_ByronG.Services
         //ademas es im ortante indicar ue normalmente los APIs
         //trabajan en dos versiones: Pruebas y Produccion
 
-        public static string ProductionURLPrefix = "http://192.168.0.10:45455/api/";
+        public static string ProductionURLPrefix = "http://192.168.0.5:45455/api/";
 
-        public static string TestingURLPrefix = "http://192.168.0.10:45455/api/";
+        public static string TestingURLPrefix = "http://192.168.0.5:45455/api/";
 
         //ademas de la raiz de URL aca vamos a indicar cual es la API Key que deberia
         //usar para construir los endpoints
